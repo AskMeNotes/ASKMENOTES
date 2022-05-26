@@ -1,73 +1,217 @@
-#logo{
-  background-color: #1e212d;
+@import url(https://fonts.googleapis.com/css?family=Cabin+Condensed);
+.head{
+    text-align: justify;
+    text-decoration-color: aquamarine;
+    position: relative;
+
 }
-.first{
-  padding-left: 26%;
+.title
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 100px;
+}
+@keyframes textclip {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  body{
+    padding:0px;
+    margin: 0px;
+    background-color: #21038da8;
+    width:100%;
+    height:100vh;
+}
+.wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: fit-content;
+    height:auto;
+}
+button{
+    width:200px;
+    height:70px;
+    background: linear-gradient(to left top, #592cc3 50%, #7137b3 50%);
+    border-style: none;
+    color:#fff;
+    font-size: 23px;
+    letter-spacing: 3px;
+    font-family: 'Lato';
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0px;
+    overflow: hidden;
+    transition: all .5s;
+    box-shadow: 0px 1px 2px rgba(0,0,0,.2);
+}
+button span{
+    position: absolute;
+    display: block;
+}
+button span:nth-child(1){
+    height: 3px;
+    width:200px;
+    top:0px;
+    left:-200px;
+    background: linear-gradient(to right, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span1 2s linear infinite;
+    animation-delay: 1s;
+}
+.q
+{
+    padding: 5vh;
+    text-align: center;
+    font-stretch: expanded;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 200;
+    color: aqua;
+    font-kerning: initial;
 }
 
-body{
-  background-image:repeating-radial-gradient(#ccf2f4,#a4ebf3);
+@keyframes span1{
+    0%{
+        left:-200px
+    }
+    100%{
+        left:200px;
+    }
 }
-#homelogo1{
-  position: absolute;
-  top: 900px;
-  left: 0.2%;
-  width: 25%;
-    float: left;
+button span:nth-child(2){
+    height: 70px;
+    width: 3px;
+    top:-70px;
+    right:0px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #f6e58d);
+    border-bottom-left-radius: 1px;
+    border-bottom-right-radius: 1px;
+    animation: span2 2s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes span2{
+    0%{
+        top:-70px;
+    }
+    100%{
+        top:70px;
+    }
+}
+button span:nth-child(3){
+    height:3px;
+    width:200px;
+    right:-200px;
+    bottom: 0px;
+    background: linear-gradient(to left, rgba(0,0,0,0), #f6e58d);
+    border-top-left-radius: 1px;
+    border-bottom-left-radius: 1px;
+    animation: span3 2s linear infinite;
+    animation-delay: 3s;
+}
+@keyframes span3{
+    0%{
+        right:-200px;
+    }
+    100%{
+        right: 200px;
+    }
+}
 
+button span:nth-child(4){
+    height:70px;
+    width:3px;
+    bottom:-70px;
+    left:0px;
+    background: linear-gradient(to top, rgba(0,0,0,0), #f6e58d);
+    border-top-right-radius: 1px;
+    border-top-left-radius: 1px;
+    animation: span4 2s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes span4{
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom:70px;
+    }
+}
+
+button:hover{
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0,0,0,.4);
+}
+button:hover span{
+    animation-play-state: paused;
+}
+.btn{
+    align-content: center;
+    padding-left: 70vh;
+    padding-top: 5vh;
+    align-self: flex-end;
+    position: relative;
+}
+.contents{
+    padding-top: 15vh;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+img{
+    height: 40vh;
+    width: 35vh;
+    padding: 50px;
+}
+.contents {
+    background: linear-gradient(
+      to right, 
+      hsl(98 100% 62%), 
+      hsl(204 100% 59%)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+  }
+  
+  .a{
+    font-size: 10vmin;
+    line-height: 1.1;
+  }
   
 
-
-
-}
-#booklogo{
-  position: absolute;
-  left: 8%;
-
-
-
-
-
-
-}
-#booklogoid
-{
-  height: 7%;
-  width:5%;
-}
-
-
-#homelogo2{
-  position: absolute;
-  right:0.2%;
-  top: 780px;
-  width: 30%;
-  height: 20%;
-    float: right;
-
-
-
-
-}
-#sitename{
-  text-align: center;
-  padding-bottom: 6%;
-  font-style:obliquec;
-  font-size: 20px;
- font-family: 'Hammersmith One', sans-serif;
-
-}
-h1{
-  font-size: 25px;
-  text-decoration: underline;
-font-family: 'Hammersmith One', sans-serif;
-}
-p{
-  font-size:40px;;
-  font-family: 'Hammersmith One', sans-serif;
-}
-
-#kir{
-  font-size: 10px;
-  font-family: 'Hammersmith One', sans-serif;
-}
+  
+  .a{
+    margin: 0;
+  }
+  
+  p {
+    font-family: "Dank Mono", ui-monospace, monospace;
+  }
+  
